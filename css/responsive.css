@@ -1,0 +1,822 @@
+/* Tablet and smaller desktops */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-size) * 0.8);
+    }
+
+    .featured-product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-image {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    /* Header/Navigation */
+    .header {
+        background-color: #101010;
+        padding: 0;
+        height: 90px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .header .container {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left-section {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+    }
+
+    .menu-toggle {
+        width: 16px;
+        height: 15px;
+        background: url('../assets/shared/tablet/icon-hamburger.svg') no-repeat center;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    .cart-link {
+        position: relative;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: var(--primary-color);
+        color: var(--white);
+        font-size: 11px;
+        font-weight: bold;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 6px;
+    }
+
+    /* Hero Section - XX99 Mark II */
+    .hero-section {
+        background: #101010;
+        height: 729px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: -120px;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image img {
+        width: auto;
+        height: 110%; /* Increase image height */
+        object-fit: contain;
+        transform: scale(1.2); /* Scale up the image */
+    }
+
+    .hero-text {
+        position: relative;
+        z-index: 2;
+        max-width: 379px;
+        margin: 0 auto;
+        color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text .overline {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .hero-text h1 {
+        color: var(--white);
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+        margin: 16px 0 24px;
+    }
+
+    .hero-text p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 40px;
+        max-width: 349px;
+        text-align: center;
+    }
+
+    .hero-text .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 15px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        letter-spacing: 1px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    /* Mobile Navigation Menu */
+    .mobile-nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 32px 40px;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .mobile-nav .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .mobile-nav .nav-links a {
+        color: var(--black);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .mobile-nav .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Menu Overlay */
+    .menu-overlay {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 90px);
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Categories Section */
+    .categories-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+
+    .categories-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .category-card {
+        position: relative;
+        background-color: var(--light-gray);
+        border-radius: var(--border-radius);
+        text-align: center;
+    }
+
+    .category-card img {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .category-card h2 {
+        font-size: 18px;
+        margin-bottom: 17px;
+    }
+
+    .shop-link {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .shop-link:hover {
+        color: var(--primary-color);
+    }
+
+    /* ZX9 Speaker Feature */
+    .zx9-featured-section {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        background-color: var(--primary-color);
+        border-radius: var(--border-radius);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .zx9-featured-container {
+        background: none;
+        padding: 64px 0;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .zx9-featured-container::before {
+        content: '';
+        position: absolute;
+        width: 944px;
+        height: 944px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .zx9-featured-container::after {
+        content: '';
+        position: absolute;
+        width: 542px;
+        height: 542px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .zx9-image {
+        width: 200px;
+        margin: 0 auto 40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .zx9-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .zx9-content {
+        max-width: 349px;
+        margin: 0 auto;
+        color: var(--white);
+        position: relative;
+        z-index: 2;
+    }
+
+    .zx9-content h2 {
+        color: var(--white);
+        font-size: 56px;
+        line-height: 58px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+
+    .zx9-content p {
+        color: var(--white);
+        opacity: 0.75;
+        margin-bottom: 40px;
+    }
+
+    .zx9-content .btn-black {
+        background: var(--black);
+        color: var(--white);
+        border: none;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .zx9-content .btn-black:hover {
+        background: #4C4C4C;
+    }
+
+    /* ZX7 Speaker Feature */
+    .zx7-secondary-section {
+        padding: 32px var(--spacing-lg);
+    }
+
+    .zx7-secondary-container {
+        background-image: url('../assets/home/tablet/image-speaker-zx7.jpg');
+        height: 320px;
+        border-radius: var(--border-radius);
+        padding-left: 62px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* YX1 Earphones Feature */
+    .yx1-secondary-section {
+        padding: 32px var(--spacing-lg);
+    }
+
+    .yx1-secondary-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .yx1-image {
+        height: 320px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    .yx1-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .yx1-content {
+        background-color: var(--light-gray);
+        border-radius: var(--border-radius);
+        padding: 101px 41px;
+    }
+
+    /* Best Gear Section */
+    .best-gear-section {
+        padding: var(--spacing-xxl) var(--spacing-lg);
+        text-align: center;
+    }
+
+    .best-gear-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .best-gear-text {
+        order: 2;
+        max-width: 573px;
+        margin: 63px auto 0;
+    }
+
+    .best-gear-text h2 {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: 1.5px;
+        margin-bottom: 32px;
+    }
+
+    .best-gear-text p {
+        opacity: 0.5;
+        max-width: 573px;
+        margin: 0 auto;
+    }
+
+    .best-gear-image {
+        order: 1;
+    }
+
+    .best-gear-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--black);
+        padding: var(--spacing-xl) var(--spacing-lg);
+        color: var(--white);
+    }
+
+    .footer-content {
+        max-width: 689px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .footer-logo {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .footer-links {
+        display: flex;
+        gap: var(--spacing-lg);
+        margin: var(--spacing-lg) 0;
+    }
+
+    .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .footer-description {
+        opacity: 0.5;
+        margin-bottom: var(--spacing-xl);
+        line-height: 25px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: var(--spacing-xl);
+    }
+
+    .footer-copyright {
+        opacity: 0.5;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: var(--spacing-md);
+    }
+
+    .footer-social a {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.7;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-size) * 0.7);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-links {
+        grid-column: 1 / -1;
+        margin: var(--spacing-lg) 0;
+    }
+
+    .footer-description {
+        grid-column: 1 / -1;
+    }
+
+    .footer-social {
+        grid-column: 1 / -1;
+        margin-top: var(--spacing-lg);
+    }
+
+    /* Category Card Final Adjustments */
+    .category-card {
+        height: 165px;
+        padding: 88px 0 22px;
+        margin-top: 52px;
+    }
+
+    /* ZX7 Speaker Content Adjustments */
+    .zx7-content h3 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    /* YX1 Earphones Content Adjustments */
+    .yx1-content h3 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    /* Container Width Adjustments */
+    .container {
+        max-width: 689px;
+        padding: 0 var(--spacing-lg);
+    }
+
+    /* Mobile Navigation Menu */
+    .mobile-nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 32px 40px;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .mobile-nav .categories-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-lg);
+        margin-top: 0;
+    }
+
+    /* Footer Final Adjustments */
+    .footer-content {
+        max-width: 689px;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .footer-copyright {
+        opacity: 0.5;
+    }
+
+    /* Mobile Menu Animation */
+    .mobile-nav {
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        visibility: hidden;
+    }
+
+    .mobile-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Menu Toggle Animation */
+    .menu-toggle {
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle.active {
+        transform: rotate(90deg);
+    }
+
+    /* Prevent Body Scroll when Menu is Open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: var(--spacing-md);
+    }
+
+    .nav-links a {
+        margin: var(--spacing-xs) 0;
+    }
+
+    .hero {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-size) * 0.6);
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
+}
+
+/* Navigation Menu for Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: var(--spacing-md);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* Product Grid Responsive */
+@media screen and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Featured Section Responsive */
+@media screen and (max-width: 768px) {
+    .featured-product {
+        padding: var(--spacing-lg);
+    }
+
+    .featured-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Product Detail Page Responsive Styles */
+@media (max-width: 1024px) {
+    .product-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .product-features {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .product-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-info h1 {
+        font-size: 2rem;
+    }
+
+    .product-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .quantity-selector {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .add-to-cart {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .features h2,
+    .in-the-box h2,
+    .you-may-also-like h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-price {
+        font-size: 1.25rem;
+    }
+}
+
+/* Hide hamburger menu in desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Cart notification positioning for desktop */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    /* Show hamburger menu in tablet view */
+    .menu-toggle {
+        width: 16px;
+        height: 15px;
+        background: url('../assets/shared/tablet/icon-hamburger.svg') no-repeat center;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: block;
+    }
+} 

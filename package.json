@@ -1,0 +1,12 @@
+{
+  "name": "audiophile-ecommerce",
+  "version": "1.0.0",
+  "description": "Audiophile e-commerce website",
+  "main": "index.js",
+  "scripts": {
+    "copy-assets": "node copy-assets.js",
+    "setup": "npm run copy-assets"
+  },
+  "author": "",
+  "license": "ISC"
+} 
