@@ -46,20 +46,5 @@ function createProductCard(product) {
     return card;
 }
 
-// Mobile menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('active');
-    }
-});
-
 // Load products when the page loads
 document.addEventListener('DOMContentLoaded', loadProducts); 

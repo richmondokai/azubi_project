@@ -193,7 +193,7 @@ h6 { font-size: var(--h6-size); }
 
 .cart-count {
     position: absolute;
-    top: 32px;
+    top: -8px;
     right: -8px;
     background: #D87D4A;
     color: #fff;
@@ -273,9 +273,10 @@ h6 { font-size: var(--h6-size); }
 
 .categories-container {
     display: flex;
-    gap: 2rem;
+    gap: 30px;
     justify-content: center;
-    padding-top: 4rem;
+    padding: 0 24px;
+    margin-top: 52px;
 }
 
 .category-card {
@@ -293,7 +294,7 @@ h6 { font-size: var(--h6-size); }
 }
 
 .category-card img {
-    width: 180px;
+    width: 200px;
     position: absolute;
     top: -80px;
     left: 50%;
@@ -346,19 +347,77 @@ h6 { font-size: var(--h6-size); }
 
 /* Tablet View */
 @media (max-width: 1024px) {
-    .categories-container {
+    footer {
+        padding: 60px 24px;
+    }
+
+    .footer-content-row {
         flex-direction: column;
-        align-items: center;
-        gap: 5rem;
+        align-items: flex-start;
+        gap: 36px;
+        position: relative;
+        padding-bottom: 80px;
     }
 
-    .category-card {
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
-        max-width: 600px;
     }
 
-    .category-card h2 {
-        font-size: 15px;
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer-logo {
+        margin-bottom: 32px;
+    }
+
+    .footer-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        margin-bottom: 32px;
+        gap: 34px;
+        flex-wrap: wrap;
+        width: auto;
+        position: absolute;
+        top: 28px;
+        left: 0;
+    }
+
+    .footer-description {
+        text-align: left;
+        margin: 0;
+        max-width: 540px;
+        margin-bottom: 32px;
+        margin-top: 20px;
+    }
+
+    .footer-description p {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-copyright {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: left;
+    }
+
+    .footer-social {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        gap: 16px;
+        margin: 0;
     }
 }
 
@@ -376,6 +435,41 @@ h6 { font-size: var(--h6-size); }
     .category-card img {
         width: 150px;
         top: -60px;
+    }
+
+    footer {
+        padding: 52px 0;
+    }
+
+    .footer-content-row {
+        align-items: center;
+        padding-bottom: 0;
+        gap: 48px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin: 48px 0;
+    }
+
+    .footer-description {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .footer-copyright {
+        position: static;
+        text-align: center;
+    }
+
+    .footer-social {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        gap: 16px;
     }
 }
 
@@ -573,46 +667,54 @@ h6 { font-size: var(--h6-size); }
     border-radius: 8px;
     overflow: hidden;
 }
+
 .best-gear-container {
     display: flex;
-    align-items: stretch;
-    height: 480px;
-    gap: 0;
+    align-items: center;
+    gap: 125px;
+    padding: 0;
 }
+
 .best-gear-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 4rem;
+    padding: 0;
+    max-width: 445px;
 }
+
 .best-gear-text h2 {
     font-size: 40px;
+    line-height: 44px;
     letter-spacing: 1.5px;
+    margin-bottom: 32px;
     text-transform: uppercase;
-    margin-bottom: 2rem;
 }
+
 .best-gear-text .highlight {
     color: #D87D4A;
 }
+
 .best-gear-text p {
     opacity: 0.5;
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 25px;
+    margin: 0;
 }
+
 .best-gear-image {
     flex: 1;
     display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
+
 .best-gear-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    max-width: none;
 }
 
 /* FOOTER */
@@ -693,118 +795,6 @@ footer {
 
 .footer-social a:hover img {
     filter: brightness(0) saturate(100%) invert(56%) sepia(82%) saturate(1109%) hue-rotate(346deg) brightness(91%) contrast(98%);
-}
-
-/* Tablet View */
-@media (max-width: 1024px) {
-    footer {
-        padding: 60px 24px; /* Ensure consistent horizontal padding */
-    }
-
-    .footer-content-row {
-        flex-direction: column;
-        align-items: flex-start; /* Aligns all primary content to the left */
-        gap: 36px;
-        position: relative;
-        padding-bottom: 80px; /* Space for absolutely positioned bottom elements */
-    }
-
-    .footer-left {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .footer-right {
-        /* Ensure this container doesn't force central alignment if not needed */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .footer-logo {
-        margin-bottom: 32px;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: row; /* Force horizontal layout */
-        justify-content: flex-start; /* Explicitly align links to the left */
-        margin-bottom: 32px;
-        gap: 34px;
-        flex-wrap: wrap;
-        width: auto;
-    }
-
-    .footer-description {
-        text-align: left; /* Ensure the container's text aligns left */
-        margin: 0; /* Reset any centralizing margins */
-        max-width: 540px;
-        margin-bottom: 32px;
-    }
-
-    .footer-description p {
-        text-align: left; /* Explicitly align the paragraph text left */
-        margin: 0; /* Remove default paragraph margins that might affect flow */
-        padding: 0;
-    }
-
-    .footer-copyright {
-        position: absolute;
-        bottom: 24px; /* Aligns with footer's bottom padding */
-        left: 24px; /* Aligns with footer's left padding */
-        text-align: left;
-    }
-
-    .footer-social {
-        position: absolute;
-        bottom: 24px; /* Aligns with footer's bottom padding */
-        right: 24px; /* Aligns with footer's right padding */
-        display: flex;
-        gap: 16px;
-        margin: 0;
-    }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-    footer {
-        padding: 52px 0;
-    }
-
-    .footer-content-row {
-        align-items: center;
-        padding-bottom: 0;
-        gap: 48px;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        margin: 48px 0;
-    }
-
-    .footer-description {
-        text-align: center;
-        margin-bottom: 48px;
-    }
-
-    /* Reset absolute positioning for mobile */
-    .footer-copyright {
-        position: static;
-        text-align: center;
-    }
-
-    .footer-social {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin: 0;
-        gap: 16px;
-    }
 }
 
 /* Product Grid */
