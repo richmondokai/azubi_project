@@ -56,4 +56,4 @@ A modern, responsive e-commerce website built with HTML, CSS, and JavaScript.
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests. 
+Feel free to submit issues and enhancement requests.
