@@ -13,7 +13,7 @@
             background: #F1F1F1;
         }
         .checkout-section {
-            padding: 48px 0 80px 0;
+            padding: 48px 24px 80px 24px;
             background: #F1F1F1;
         }
         .checkout-grid {
@@ -27,7 +27,7 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-            padding: 48px 40px;
+            padding: 32px 28px;
         }
         .checkout-form-card {
             flex: 1 1 0;
@@ -228,12 +228,69 @@
             background: #FBAF85;
         }
         @media (max-width: 900px) {
+            .checkout-section {
+                padding: 32px 40px 116px 40px;
+            }
             .checkout-grid {
                 flex-direction: column;
-                gap: 40px;
+                gap: 32px;
+                max-width: 689px;
+                margin: 0 auto;
+                padding: 0;
             }
-            .summary-card {
+            .checkout-form-card, .summary-card {
                 width: 100%;
+                padding: 32px;
+                margin: 0;
+            }
+            .form-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .form-group {
+                margin-bottom: 8px;
+            }
+            .form-group.full-width {
+                grid-column: 1 / -1;
+            }
+            .payment-methods {
+                width: 100%;
+                align-items: stretch;
+            }
+            .payment-option {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+            }
+            input[type="text"], 
+            input[type="email"], 
+            input[type="tel"] {
+                width: 100%;
+                padding: 18px;
+            }
+            .cart-items {
+                margin-bottom: 32px;
+            }
+            .cart-item {
+                padding: 8px 0;
+            }
+            .summary-totals {
+                margin-top: 32px;
+            }
+            .summary-row {
+                padding: 8px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .checkout-section {
+                padding: 24px 24px 96px 24px;
+            }
+            .checkout-form-card, .summary-card {
+                padding: 24px;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
         }
         .summary-card h2 {
